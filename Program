@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TP_POOII_BFN
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            PersonneDesiree p = new PersonneDesiree.Builder()
+                              .WithSexe("Femme")
+                              .WithAge(30)
+                              .WithPays("Bresil")
+                              .WithCheveu("Rousse")
+                              .WithYeux("Bleu")
+                              .WithEducation("Universite")
+                              .Build();
+
+            Console.WriteLine(" Quel est le sexe? " + p.getSexe());
+            Console.WriteLine(" Quel est le pays d'origine? " + p.getPays_origine());
+            Console.WriteLine(" Quelle est la couleur des cheveux? " + p.getCouleur_cheveau());
+            Console.WriteLine(" Quelle est la couleur des yeux? " + p.getCouleur_yeux());
+            Console.WriteLine(" Quel est le niveau d'education? " + p.getEducation());
+            Console.WriteLine(" Quel est l'âge? " + p.getAge());
+            
+
+            Console.ReadKey();
+
+        }
+    }
+}
