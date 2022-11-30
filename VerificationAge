@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TP_POOII_BFN
+{
+    public class VerificationAge : Exception
+    {
+        public int max_age = 110;
+        public int min_age = 18;
+
+        public int Verification_Age(int age)
+        {
+            
+            if(age < max_age)
+            {
+                if(age >= min_age)
+                {
+                    return age;
+                }
+                else 
+                {
+                    age = 18;
+                    Console.WriteLine("L'âge minimal doit être plus grand ou égal à 18 ans. Valeur d'âge minimal ajustée.");
+                    Console.WriteLine("Quel est l'âge? " + age);
+                    Console.ReadKey();
+                    return age;
+                }
+            }
+            else
+            {
+                Console.WriteLine("L'âge de plus de 110 ans n'est pas autorisé...");
+                Console.ReadKey();
+                return age;
+            }
+        }
+    }
+}
